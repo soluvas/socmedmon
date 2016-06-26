@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html wicket:id="html" lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<title wicket:id="title">Project</title>
+<meta wicket:id="metaDescription" name="description"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<style>
+body { padding-top: 63px }
+</style>
+</head>
+<body>
+<!-- header -->
+<header class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- logo -->
+            <div class="logo">
+                <a href="/" class="navbar-brand">Lumen Reasoner</a>
+            </div>
+            <!-- /logo -->
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <nav class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Beranda</a></li>
+                <li><a wicket:id="skillManagementLink" href="#">Skills</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- //End-banner-->
+
+<div wicket:id="notificationPanel"></div>
+
+<wicket:child/>
+
+</body>
+</html>

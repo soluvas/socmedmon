@@ -1,0 +1,100 @@
+databaseChangeLog:
+  - changeSet:
+      id: postgis
+      author: ceefour
+      changes:
+        - sql: |
+            CREATE EXTENSION IF NOT EXISTS postgis SCHEMA public
+  - changeSet:
+      id: fuzzystrmatch
+      author: ceefour
+      changes:
+        - sql: "CREATE EXTENSION IF NOT EXISTS fuzzystrmatch SCHEMA public"
+  - changeSet:
+      id: watchedsite
+      author: ceefour
+      changes:
+        - createTable:
+            schemaName: buzz
+            tableName: watchedsite
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: kind
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: siteid
+                  type: varchar(255)
+              - column:
+                  name: sitescreenname
+                  type: varchar(255)
+        - createIndex:
+            indexName: ik_watchedsite_kind
+            schemaName: buzz
+            tableName: watchedsite
+            columns:
+              - name: kind
+        - createIndex:
+            indexName: ik_watchedsite_siteid
+            schemaName: buzz
+            tableName: watchedsite
+            columns:
+              - name: siteid
+        - createIndex:
+            indexName: ik_watchedsite_sitescreenname
+            schemaName: buzz
+            tableName: watchedsite
+            columns:
+              - name: sitescreenname
+  - changeSet:
+      id: sitestat
+      author: ceefour
+      changes:
+        - createTable:
+            schemaName: buzz
+            tableName: sitestat
+            columns:
+              - column:
+                  name: watchedsite_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: creationtime
+                  type: timestamp with time zone
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: followercount
+                  type: int
+              - column:
+                  name: followedbycount
+                  type: int
+              - column:
+                  name: postlikedbycount
+                  type: int
+              - column:
+                  name: postcount
+                  type: int
+        - createIndex:
+            indexName: ik_sitestat_watchedsite_id
+            schemaName: buzz
+            tableName: sitestat
+            columns:
+              - name: watchedsite_id
+        - createIndex:
+            indexName: ik_sitestat_creationtime
+            schemaName: buzz
+            tableName: sitestat
+            columns:
+              - name: creationtime
