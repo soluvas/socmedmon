@@ -6,5 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 /**
  * Created by ceefour on 26/06/2016.
  */
-public interface SiteStatRepository extends JpaRepository<SiteStat, SiteStatId> {
+@RepositoryRestResource(excerptProjection = SiteStat.Inline.class)
+public interface SiteStatRepository extends JpaRepository<SiteStat, Long> {
 }
