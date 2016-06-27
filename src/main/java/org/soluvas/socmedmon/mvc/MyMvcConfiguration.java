@@ -17,8 +17,7 @@ public class MyMvcConfiguration extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry);
         registry.addResourceHandler("/**")
-                .addResourceLocations("file:mobile/www/")
-                .setCachePeriod(60 * 60 * 24 * 30);
+                .addResourceLocations("file:mobile/www/"); // don't excessive cache, we change sometimes
     }
 
     @Override
