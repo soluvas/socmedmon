@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by ceefour on 26/06/2016.
  */
-@Component
+//@Component
 public class SiteStatIdConverter implements BackendIdConverter {
 
     @Override

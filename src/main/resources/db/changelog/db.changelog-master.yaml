@@ -63,16 +63,21 @@ databaseChangeLog:
             tableName: sitestat
             columns:
               - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
                   name: watchedsite_id
                   type: bigint
                   constraints:
-                    primaryKey: true
                     nullable: false
               - column:
                   name: creationtime
                   type: timestamp with time zone
                   constraints:
-                    primaryKey: true
                     nullable: false
               - column:
                   name: followercount
@@ -86,6 +91,11 @@ databaseChangeLog:
               - column:
                   name: postcount
                   type: int
+        - addUniqueConstraint:
+            constraintName: uk_sitestat_watchedsite_id_creationtime
+            schemaName: buzz
+            tableName: sitestat
+            columnNames: watchedsite_id, creationtime
         - createIndex:
             indexName: ik_sitestat_watchedsite_id
             schemaName: buzz
@@ -98,3 +108,23 @@ databaseChangeLog:
             tableName: sitestat
             columns:
               - name: creationtime
+        - addForeignKeyConstraint:
+            constraintName: fk_sitestat_watchedsite_id
+            baseTableSchemaName: buzz
+            baseTableName: sitestat
+            baseColumnNames: watchedsite_id
+            referencedTableSchemaName: buzz
+            referencedTableName: watchedsite
+            referencedColumnNames: id
+            onDelete: CASCADE
+  - changeSet:
+      id: watchedsite_name
+      author: ceefour
+      changes:
+        - addColumn:
+            schemaName: buzz
+            tableName: watchedsite
+            columns:
+              - column:
+                  name: name
+                  type: varchar(255)

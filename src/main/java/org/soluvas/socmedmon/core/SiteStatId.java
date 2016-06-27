@@ -36,4 +36,20 @@ public class SiteStatId implements Serializable {
     public String toString() {
         return watchedSiteId + "_" + creationTime;
     }
+
+    public Long getWatchedSiteId() {
+        return watchedSiteId;
+    }
+
+    public void setWatchedSiteId(Long watchedSiteId) {
+        this.watchedSiteId = watchedSiteId;
+    }
+
+    public DateTime getCreationTime() {
+        return creationTime;
+    }
+
+    public void setCreationTime(DateTime creationTime) {
+        this.creationTime = creationTime;
+    }
 }

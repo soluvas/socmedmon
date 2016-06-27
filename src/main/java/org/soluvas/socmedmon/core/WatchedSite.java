@@ -1,6 +1,7 @@
 package org.soluvas.socmedmon.core;
 
 import com.google.common.base.MoreObjects;
+import org.springframework.data.rest.core.config.Projection;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,12 +12,22 @@ import java.io.Serializable;
  */
 @Entity
 public class WatchedSite implements Serializable {
+
+    @Projection(types = WatchedSite.class)
+    public interface Inline {
+        Long getId();
+        ExternalSite getKind();
+        String getSiteId();
+        String getSiteScreenName();
+    }
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Enumerated(EnumType.STRING)
     private ExternalSite kind;
     private String siteId;
     private String siteScreenName;
+    private String name;
 
     public Long getId() {
         return id;
@@ -62,6 +73,18 @@ public class WatchedSite implements Serializable {
         this.siteScreenName = siteScreenName;
     }
 
+    /**
+     * Name for easy human identification.
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this).omitNullValues()
@@ -69,6 +92,7 @@ public class WatchedSite implements Serializable {
                 .add("kind", kind)
                 .add("siteId", siteId)
                 .add("siteScreenName", siteScreenName)
+                .add("name", name)
                 .toString();
     }
 }

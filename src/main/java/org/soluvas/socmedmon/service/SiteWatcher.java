@@ -38,6 +38,7 @@ public class SiteWatcher {
 //    @Scheduled(cron = "0 */60 * * * *")
     @Scheduled(fixedDelay = 60 * 60 * 1000) // once per hour
     public void fetchStats() throws TwitterException {
+        final DateTime pointTime = new DateTime().withMillisOfSecond(0);
         final ImmutableList<WatchedSite> watchedSites = ImmutableList.copyOf(watchedSiteRepo.findAll());
         log.info("Fetching stats for {} watched sites: {}",
                 watchedSites.size(), watchedSites.stream().limit(10).toArray());
@@ -52,23 +53,25 @@ public class SiteWatcher {
             final long[] ids = twitterUsingIds.stream().mapToLong(it -> Long.valueOf(it.getSiteId())).toArray();
             log.info("Fetching {} Twitter stats by ID: {}", ids.length, ids);
             final ResponseList<User> users = twitter.users().lookupUsers(ids);
-            saveStat(watchedSites, users);
+            saveStat(pointTime, watchedSites, users);
         }
         if (!twitterUsingScreenNames.isEmpty()) {
             final String[] screenNames = twitterUsingScreenNames.stream().map(it -> it.getSiteScreenName()).toArray(String[]::new);
             log.info("Fetching {} Twitter stats by screen name: {}", screenNames.length, screenNames);
             final ResponseList<User> users = twitter.users().lookupUsers(screenNames);
-            saveStat(watchedSites, users);
+            saveStat(pointTime, watchedSites, users);
         }
     }
 
-    protected void saveStat(ImmutableList<WatchedSite> watchedSites, ResponseList<User> users) {
+    protected void saveStat(DateTime pointTime, ImmutableList<WatchedSite> watchedSites, ResponseList<User> users) {
         for (final User user : users) {
             final SiteStat siteStat = new SiteStat();
             final WatchedSite watchedSite = watchedSites.stream().filter(it -> ExternalSite.TWITTER == it.getKind() &&
                     (String.valueOf(user.getId()).equals(it.getSiteId()) ||
                             user.getScreenName().equalsIgnoreCase(it.getSiteScreenName()))).findAny().get();
-            siteStat.setId(new SiteStatId(watchedSite.getId(), new DateTime()));
+//            siteStat.setId(new SiteStatId(watchedSite.getId(), new DateTime()));
+            siteStat.setWatchedSiteId(watchedSite.getId());
+            siteStat.setCreationTime(pointTime);
             siteStat.setFollowerCount(user.getFollowersCount());
             siteStat.setFollowedByCount(user.getFriendsCount());
             siteStat.setPostCount(user.getStatusesCount());

@@ -1,9 +1,9 @@
 package org.soluvas.socmedmon.core;
 
 import com.google.common.base.MoreObjects;
+import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
-import org.springframework.data.rest.webmvc.spi.BackendIdConverter;
-import org.springframework.stereotype.Component;
+import org.springframework.data.rest.core.config.Projection;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -13,6 +13,25 @@ import java.io.Serializable;
  */
 @Entity
 public class SiteStat implements Serializable {
+
+    /**
+     * Created by ceefour on 27/06/2016.
+     */
+    @Projection(name = "inline", types = SiteStat.class)
+    public interface Inline {
+        Long getId();
+
+        Long getWatchedSiteId();
+
+        public DateTime getCreationTime();
+
+        public WatchedSite getWatchedSite();
+
+        public int getFollowerCount();
+        public int getFollowedByCount();
+        public int getPostLikedByCount();
+        public int getPostCount();
+    }
 
     //    @Component
 //    public static class PKConverter implements org.springframework.core.convert.converter.Converter<String, PK> {
@@ -24,14 +43,17 @@ public class SiteStat implements Serializable {
 //        }
 //    }
 
-    @EmbeddedId
-    private SiteStatId id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+//    @EmbeddedId
+//    private SiteStatId id;
 //    @Id
-//    @Column(name = "watchedsite_id")
-//    private Long watchedSite_id;
-//    @Id @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @Column(name = "watchedsite_id", nullable = false)
+    private Long watchedSiteId;
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @Column(nullable = false)
 //    @Column(name = "creationtime")
-//    private DateTime creationTime;
+    private DateTime creationTime;
     @ManyToOne
     @JoinColumn(name = "watchedsite_id", insertable = false, updatable = false)
     private WatchedSite watchedSite;
@@ -41,20 +63,32 @@ public class SiteStat implements Serializable {
     private int postLikedByCount;
     private int postCount;
 
-    public SiteStatId getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(SiteStatId id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Long getWatchedSite_id() {
-        return id.watchedSiteId;
+    public Long getWatchedSiteId() {
+        return watchedSiteId;
     }
 
+    public void setWatchedSiteId(Long watchedSiteId) {
+        this.watchedSiteId = watchedSiteId;
+    }
+
+    /**
+     * This is not actual creation time but rather temporal point-time.
+     * @return
+     */
     public DateTime getCreationTime() {
-        return id.creationTime;
+        return creationTime;
+    }
+
+    public void setCreationTime(DateTime creationTime) {
+        this.creationTime = creationTime;
     }
 
     public WatchedSite getWatchedSite() {
@@ -112,8 +146,9 @@ public class SiteStat implements Serializable {
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this).omitNullValues()
-                .add("watchedSite_id", id.watchedSiteId)
-                .add("creationTime", id.creationTime)
+                .add("id", id)
+                .add("watchedSiteId", watchedSiteId)
+                .add("creationTime", creationTime)
                 .add("followerCount", followerCount)
                 .add("followedByCount", followedByCount)
                 .add("postLikedByCount", postLikedByCount)

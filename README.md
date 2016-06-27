@@ -34,7 +34,7 @@ Exposed using Spring Boot Data REST. You can use Postman to access it.
 * GET http://localhost:8080/api/watchedSites
 * POST http://localhost:8080/api/watchedSites
 
-Check out `Soluvas_Socmedmon.postman` for concrete example requests and responses.
+Check out `Soluvas_Socmedmon.postman_collection.json` for concrete example requests and responses.
 
 ## Credits
 
