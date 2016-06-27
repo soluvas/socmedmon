@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.soluvas.socmed.TwitterApp;
 import org.soluvas.socmed.TwitterAuthorization;
 import org.soluvas.socmedmon.core.*;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +17,7 @@ import twitter4j.auth.AccessToken;
 
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -94,29 +97,103 @@ public class SiteWatcher {
             siteStatRepo.save(siteStat);
             log.debug("Saved {} stat: {}", watchedSite, siteStat);
 
-            SiteSummary siteSummary = siteSummaryRepo.findOne(watchedSite.getId());
-            if (null == siteSummary) {
-                siteSummary = new SiteSummary();
-                siteSummary.setWatchedSite(watchedSite);
+            summarize(pointTime, siteStat, watchedSite);
+        }
+    }
+
+    protected SiteSummary summarize(DateTime pointTime, SiteStat siteStat, WatchedSite watchedSite) {
+        SiteSummary siteSummary = siteSummaryRepo.findOne(watchedSite.getId());
+        if (null == siteSummary) {
+            siteSummary = new SiteSummary();
+            siteSummary.setWatchedSite(watchedSite);
+        }
+        if (null == siteSummary.getFollowerCount()) {
+            siteSummary.setFollowerCount(new SiteSummary.Metric());
+        }
+        if (null == siteSummary.getFollowedByCount()) {
+            siteSummary.setFollowedByCount(new SiteSummary.Metric());
+        }
+        if (null == siteSummary.getPostCount()) {
+            siteSummary.setPostCount(new SiteSummary.Metric());
+        }
+        if (null == siteSummary.getPostLikedByCount()) {
+            siteSummary.setPostLikedByCount(new SiteSummary.Metric());
+        }
+        siteSummary.setModificationTime(pointTime);
+
+        // Latest
+        siteSummary.getFollowerCount().setLatest(siteStat.getFollowerCount());
+        siteSummary.getFollowedByCount().setLatest(siteStat.getFollowedByCount());
+        siteSummary.getPostCount().setLatest(siteStat.getPostCount());
+        siteSummary.getPostLikedByCount().setLatest(siteStat.getPostLikedByCount());
+
+        // Comparative Metrics
+        final Optional<SiteStat> dayPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusDays(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+        final Optional<SiteStat> weekPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusWeeks(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+        final Optional<SiteStat> monthPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusMonths(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+        log.debug("Prev stat for {}: day={} week={} month={}",
+                watchedSite, dayPrev.orElse(null), weekPrev.orElse(null), monthPrev.orElse(null));
+        setComparativeMetric(siteSummary.getFollowerCount(), dayPrev.map(SiteStat::getFollowerCount),
+                weekPrev.map(SiteStat::getFollowerCount), monthPrev.map(SiteStat::getFollowerCount));
+        setComparativeMetric(siteSummary.getFollowedByCount(), dayPrev.map(SiteStat::getFollowedByCount),
+                weekPrev.map(SiteStat::getFollowedByCount), monthPrev.map(SiteStat::getFollowedByCount));
+        setComparativeMetric(siteSummary.getPostCount(), dayPrev.map(SiteStat::getPostCount),
+                weekPrev.map(SiteStat::getPostCount), monthPrev.map(SiteStat::getPostCount));
+        setComparativeMetric(siteSummary.getPostLikedByCount(), dayPrev.map(SiteStat::getPostLikedByCount),
+                weekPrev.map(SiteStat::getPostLikedByCount), monthPrev.map(SiteStat::getPostLikedByCount));
+
+        siteSummary = siteSummaryRepo.save(siteSummary);
+        log.debug("Updated {} summary: {}", watchedSite, siteSummary);
+        return siteSummary;
+    }
+
+    /**
+     * Update temporal-comparative metric values for a metric. It does not modify database.
+     * @param metric
+     * @param dayPrevValue
+     * @param weekPrevValue
+     * @param monthPrevValue
+     */
+    protected void setComparativeMetric(SiteSummary.Metric metric, Optional<Integer> dayPrevValue,
+                                        Optional<Integer> weekPrevValue, Optional<Integer> monthPrevValue) {
+        // DayPrev
+        if (dayPrevValue.isPresent()) {
+            metric.setDayPrev(dayPrevValue.get());
+            metric.setDayDelta(metric.getLatest() - dayPrevValue.get());
+            if (dayPrevValue.get() != 0) {
+                metric.setDayChange(metric.getDayDelta() * 100f / dayPrevValue.get());
+            } else {
+                metric.setDayChange(0f);
             }
-            if (null == siteSummary.getFollowerCount()) {
-                siteSummary.setFollowerCount(new SiteSummary.Metric());
+            metric.setDayTrend(metric.getDayDelta() > 0 ?
+                    SiteSummary.PeriodTrend.UP :
+                    (metric.getDayDelta() > 0 ? SiteSummary.PeriodTrend.DOWN : SiteSummary.PeriodTrend.NONE));
+        }
+        // WeekPrev
+        if (weekPrevValue.isPresent()) {
+            metric.setWeekPrev(weekPrevValue.get());
+            metric.setWeekDelta(metric.getLatest() - weekPrevValue.get());
+            if (weekPrevValue.get() != 0) {
+                metric.setWeekChange(metric.getWeekDelta() * 100f / weekPrevValue.get());
+            } else {
+                metric.setWeekChange(0f);
             }
-            if (null == siteSummary.getFollowedByCount()) {
-                siteSummary.setFollowedByCount(new SiteSummary.Metric());
+            metric.setWeekTrend(metric.getWeekDelta() > 0 ?
+                    SiteSummary.PeriodTrend.UP :
+                    (metric.getWeekDelta() > 0 ? SiteSummary.PeriodTrend.DOWN : SiteSummary.PeriodTrend.NONE));
+        }
+        // MonthPrev
+        if (monthPrevValue.isPresent()) {
+            metric.setMonthPrev(monthPrevValue.get());
+            metric.setMonthDelta(metric.getLatest() - monthPrevValue.get());
+            if (monthPrevValue.get() != 0) {
+                metric.setMonthChange(metric.getMonthDelta() * 100f / monthPrevValue.get());
+            } else {
+                metric.setMonthChange(0f);
             }
-            if (null == siteSummary.getPostCount()) {
-                siteSummary.setPostCount(new SiteSummary.Metric());
-            }
-            if (null == siteSummary.getPostLikedByCount()) {
-                siteSummary.setPostLikedByCount(new SiteSummary.Metric());
-            }
-            siteSummary.setModificationTime(pointTime);
-            siteSummary.getFollowerCount().setLatest(siteStat.getFollowerCount());
-            siteSummary.getFollowedByCount().setLatest(siteStat.getFollowedByCount());
-            siteSummary.getPostCount().setLatest(siteStat.getPostCount());
-            siteSummary.getPostLikedByCount().setLatest(siteStat.getPostLikedByCount());
-            siteSummaryRepo.save(siteSummary);
+            metric.setMonthTrend(metric.getMonthDelta() > 0 ?
+                    SiteSummary.PeriodTrend.UP :
+                    (metric.getMonthDelta() > 0 ? SiteSummary.PeriodTrend.DOWN : SiteSummary.PeriodTrend.NONE));
         }
     }
 }
