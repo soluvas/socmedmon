@@ -6,15 +6,25 @@
 
 angular.module('starter.controllers', [])
 .controller('DashboardCtrl', function($scope: ng.IScope, $log: ng.ILogService, $window: ng.IWindowService,
-    $timeout: ng.ITimeoutService, $resource) {
-    $log.info('Hello!');
+    $timeout: ng.ITimeoutService, $resource, $http) {
 
-    var SiteSummary = $resource('http://localhost:8080/api/siteSummaries/:id');
-    SiteSummary.get({sort: ['watchedSite.name', 'watchedSite.siteScreenName'], size: 100}, function(resp) {
-        var siteSummaries = resp._embedded.siteSummaries;
-        $scope.siteSummaries = siteSummaries;
-        $log.info('Site summaries:', siteSummaries);
-        $scope.updateTime = Date.create(siteSummaries[0].modificationTime);
-    });
+    $scope.apiUri = 'http://localhost:8080/api/';
+
+    $scope.refreshSiteSummaries = function() {
+        var SiteSummary = $resource($scope.apiUri + 'siteSummaries/:id');
+        SiteSummary.get({sort: ['watchedSite.name', 'watchedSite.siteScreenName'], size: 100}, function(resp) {
+            var siteSummaries = resp._embedded.siteSummaries;
+            $scope.siteSummaries = siteSummaries;
+            $log.info('Site summaries:', siteSummaries);
+            $scope.updateTime = Date.create(siteSummaries[0].modificationTime);
+        });
+    };
+
+    $http.get('/api/config.json', {responseType: 'json'}).then(function(resp) {
+        $scope.apiUri = resp.data.apiUri;
+        $log.info('apiUri =', $scope.apiUri, 'from', resp);
+        $scope.refreshSiteSummaries();
+    }, $scope.refreshSiteSummaries);
+
 })
 ;

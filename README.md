@@ -50,6 +50,20 @@ Now you can:
 
     gulp serve
 
+## Database Snapshot
+
+To create a local/dev snapshot:
+
+    e:
+    cd \project_amanah\buzz\snapshot\postgresql
+    pg_dump -v -Fc -t buzz.watchedsite -t buzz.sitestat -t buzz.sitesummary -f buzz_buzz_dev.socmedmon.postgresql postgres://postgres@localhost/buzz_buzz_dev
+
+To restore snapshot from dev to prd: (**Important:** won't work in Git Bash, use Command Prompt instead)
+(you may need to do this a few times due to foreign key integrity)
+
+    pg_restore -v -d postgres://buzz_buzz_prd@server/buzz_buzz_prd --data-only buzz_buzz_dev.socmedmon.postgresql
+
+
 ## Credits
 
 logo / favicon.ico from [Vecteezy](https://www.iconfinder.com/icons/532777/analyze_glass_graphs_magnifier_monitoring_seo_tablet_icon), license: CC-BY-SA 3.0.

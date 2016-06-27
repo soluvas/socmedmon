@@ -64,7 +64,6 @@ public class SiteWatcher {
         final List<WatchedSite> twitterUsingScreenNames = watchedSites.stream().filter(it -> ExternalSite.TWITTER == it.getKind() && null == it.getSiteId()).collect(Collectors.toList());
 
         final Twitter twitter = twitterFactory.getInstance();
-        twitter.setOAuthConsumer(twitterApp.getApiKey(), twitterApp.getApiSecret());
         twitter.setOAuthAccessToken(new AccessToken(twitterAuth.getAccessToken(), twitterAuth.getAccessTokenSecret()));
 
         if (!twitterUsingIds.isEmpty()) {

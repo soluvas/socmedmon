@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.wicketstuff.annotation.scan.AnnotatedMountScanner;
 
-@Component("webApp")
+//@Component("webApp")
 @Profile({"socmedmonApp"})
 public class MyWebApplication extends WebApplication {
     @Override

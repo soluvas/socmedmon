@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 
 import javax.inject.Inject;
 
-@Configuration
+//@Configuration
 @Profile({"socmedmonApp"})
 public class WicketConfig {
 
