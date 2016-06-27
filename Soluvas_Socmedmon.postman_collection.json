@@ -81,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"184101791657218\",\n    \"siteScreenName\": \"OpenGovernmentIndonesia\",\n    \"name\": \"Open Government Indonesia\"\n}\n"
+					"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"83348429930\",\n    \"siteScreenName\": \"InfoBMKG\",\n    \"name\": \"www.bmkg.go.id\"\n}\n"
 				},
 				"description": ""
 			},
@@ -770,6 +770,1186 @@
 					"cookie": [],
 					"responseTime": 402,
 					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"184101791657218\",\r\n  \"siteScreenName\" : \"OpenGovernmentIndonesia\",\r\n  \"name\" : \"Open Government Indonesia\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/13\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/13{?projection}\",\r\n      \"templated\" : true\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook PPTIKITB",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"name\": \"Pusat Penelitian Teknologi Informasi dan Komunikasi\",\n    \"siteId\": \"752403644873915\",\n    \"siteScreenName\": \"PPTIKITB\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 06:44:07 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/14",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 127,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"752403644873915\",\r\n  \"siteScreenName\" : \"PPTIKITB\",\r\n  \"name\" : \"Pusat Penelitian Teknologi Informasi dan Komunikasi\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/14\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/14{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/14/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook LSKK Institut Teknologi Bandung",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"name\": \"LSKK Institut Teknologi Bandung\",\n    \"siteId\": \"131358946922081\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 06:45:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/15",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 43,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"131358946922081\",\r\n  \"siteScreenName\" : null,\r\n  \"name\" : \"LSKK Institut Teknologi Bandung\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/15\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/15{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/15/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Twitter @infohujan",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"TWITTER\",\n    \"siteScreenName\": \"@infohujan\",\n    \"name\": \"infohujan\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 14:34:47 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/16",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 130,
+					"body": "{\r\n  \"kind\" : \"TWITTER\",\r\n  \"siteId\" : null,\r\n  \"siteScreenName\" : \"@infohujan\",\r\n  \"name\" : \"infohujan\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/16\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/16{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/16/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Twitter @infobmkg",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"TWITTER\",\n    \"siteScreenName\": \"@infobmkg\",\n    \"name\": \"infobmkg\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 14:36:11 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/17",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 42,
+					"body": "{\r\n  \"kind\" : \"TWITTER\",\r\n  \"siteId\" : null,\r\n  \"siteScreenName\" : \"@infobmkg\",\r\n  \"name\" : \"infobmkg\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/17\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/17{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/17/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook lipiindo",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"556790641024937\",\n    \"siteScreenName\": \"lipiindo\",\n    \"name\": \"Lembaga Ilmu Pengetahuan Indonesia\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:23:12 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/20",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 34,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"556790641024937\",\r\n  \"siteScreenName\" : \"lipiindo\",\r\n  \"name\" : \"Lembaga Ilmu Pengetahuan Indonesia\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/20\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/20{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/20/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook STEI ITB",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"163374240388736\",\n    \"name\": \"STEI ITB\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:24:45 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/21",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 28,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"163374240388736\",\r\n  \"siteScreenName\" : null,\r\n  \"name\" : \"STEI ITB\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/21\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/21{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/21/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook NEOnetBPPT",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"123019824532916\",\n    \"siteScreenName\": \"NEOnetBPPT\",\n    \"name\": \"NEOnet BPPT\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:26:14 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/22",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 34,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"123019824532916\",\r\n  \"siteScreenName\" : \"NEOnetBPPT\",\r\n  \"name\" : \"NEOnet BPPT\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/22\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/22{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/22/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook BPPT",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"275111049183542\",\n    \"name\": \"BPPT\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:27:30 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/23",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 32,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"275111049183542\",\r\n  \"siteScreenName\" : null,\r\n  \"name\" : \"BPPT\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/23\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/23{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/23/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook infohujan",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"281947122783\",\n    \"siteScreenName\": \"infohujan\",\n    \"name\": \"SIJAMPANG - Info sebaran hujan dan genangan\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:28:45 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/24",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 29,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"281947122783\",\r\n  \"siteScreenName\" : \"infohujan\",\r\n  \"name\" : \"SIJAMPANG - Info sebaran hujan dan genangan\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/24\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/24{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/24/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook SiJawah",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"233830093479546\",\n    \"siteScreenName\": \"SiJawah\",\n    \"name\": \"Sistem Informasi Hujan Yogyakarta dan Jawa Tengah\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:30:45 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/25",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 37,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"233830093479546\",\r\n  \"siteScreenName\" : \"SiJawah\",\r\n  \"name\" : \"Sistem Informasi Hujan Yogyakarta dan Jawa Tengah\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/25\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/25{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/25/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook lumenrobot",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"460828850727849\",\n    \"siteScreenName\": \"lumenrobot\",\n    \"name\": \"Lumen Robot Friend\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:32:40 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/26",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 29,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"460828850727849\",\r\n  \"siteScreenName\" : \"lumenrobot\",\r\n  \"name\" : \"Lumen Robot Friend\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/26\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/26{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/26/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook vidyanusa",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"836219539794497\",\n    \"siteScreenName\": \"vidyanusa\",\n    \"name\": \"VidyaNusa\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:33:51 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/27",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 28,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"836219539794497\",\r\n  \"siteScreenName\" : \"vidyanusa\",\r\n  \"name\" : \"VidyaNusa\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/27\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/27{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/27/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook dikti",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"359428135653\",\n    \"siteScreenName\": \"dikti\",\n    \"name\": \"Kementerian Riset, Teknologi dan Pendidikan Tinggi\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:35:34 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/28",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 32,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"359428135653\",\r\n  \"siteScreenName\" : \"dikti\",\r\n  \"name\" : \"Kementerian Riset, Teknologi dan Pendidikan Tinggi\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/28\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/28{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/28/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Facebook Kemdikbud.RI",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"FACEBOOK\",\n    \"siteId\": \"119573194818796\",\n    \"siteScreenName\": \"Kemdikbud.RI\",\n    \"name\": \"Kementerian Pendidikan dan Kebudayaan RI\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:36:27 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/29",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 39,
+					"body": "{\r\n  \"kind\" : \"FACEBOOK\",\r\n  \"siteId\" : \"119573194818796\",\r\n  \"siteScreenName\" : \"Kemdikbud.RI\",\r\n  \"name\" : \"Kementerian Pendidikan dan Kebudayaan RI\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/29\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/29{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/29/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Twitter @Kemdikbud_RI",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"TWITTER\",\n    \"siteScreenName\": \"Kemdikbud_RI\",\n    \"name\": \"Kementerian Pendidikan dan Kebudayaan RI\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 17:37:08 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/30",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 30,
+					"body": "{\r\n  \"kind\" : \"TWITTER\",\r\n  \"siteId\" : null,\r\n  \"siteScreenName\" : \"Kemdikbud_RI\",\r\n  \"name\" : \"Kementerian Pendidikan dan Kebudayaan RI\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/30\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/30{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/30/summary\"\r\n    }\r\n  }\r\n}"
+				},
+				{
+					"name": "Twitter @OpenGovIndo",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/watchedSites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"TWITTER\",\n    \"siteScreenName\": \"OpenGovIndo\",\n    \"name\": \"OpenGovIndo\"\n}\n"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 19:29:53 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Location",
+							"key": "Location",
+							"value": "http://localhost:8080/api/watchedSites/31",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 86,
+					"body": "{\r\n  \"kind\" : \"TWITTER\",\r\n  \"siteId\" : null,\r\n  \"siteScreenName\" : \"OpenGovIndo\",\r\n  \"name\" : \"OpenGovIndo\",\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/31\"\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/31{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"summary\" : {\r\n      \"href\" : \"http://localhost:8080/api/watchedSites/31/summary\"\r\n    }\r\n  }\r\n}"
 				}
 			]
 		},
@@ -950,6 +2130,66 @@
 					"cookie": [],
 					"responseTime": 46,
 					"body": "{\r\n  \"watchedSiteId\" : 1,\r\n  \"creationTime\" : \"2016-06-27T03:08:38.000Z\",\r\n  \"followerCount\" : 144,\r\n  \"followedByCount\" : 43,\r\n  \"postLikedByCount\" : 1,\r\n  \"postCount\" : 45,\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/siteStats/1\"\r\n    },\r\n    \"siteStat\" : {\r\n      \"href\" : \"http://localhost:8080/api/siteStats/1{?projection}\",\r\n      \"templated\" : true\r\n    },\r\n    \"watchedSite\" : {\r\n      \"href\" : \"http://localhost:8080/api/siteStats/1/watchedSite\"\r\n    }\r\n  }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "GET /api/siteSummaries",
+			"request": {
+				"url": "http://localhost:8080/api/siteSummaries",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"name": "/api/siteSummaries",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/siteSummaries",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/hal+json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Jun 2016 06:33:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 879,
+					"body": "{\r\n  \"_embedded\" : {\r\n    \"siteSummaries\" : [ {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"Info_LSKK\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 144,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 45,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 43,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 1,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 1,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/1\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/1{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/1/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"LumenRobot\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 50,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 700,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 205,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 2,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/2\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/2{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/2/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"STEI_ITB\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 666,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 249,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 78,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 3,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/3\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/3{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/3/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"itbofficial\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 508649,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 2429,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 3,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 4,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/4\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/4{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/4/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"NEOnetBPPT\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 409,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 230,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 79,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 5,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/5\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/5{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/5/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"siJawah\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 250,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 12309,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 54,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 1,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 6,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/6\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/6{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/6/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"BPPTeknologi\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 2801,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 1495,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 137,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 7,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/7\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/7{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/7/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"lipiindonesia\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 27373,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 4916,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 76,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 86,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 8,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/8\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/8{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/8/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"kemristekdikti\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 942316,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 17962,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 33,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 41,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 9,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/9\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/9{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/9/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"BPPT_humas\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 7207,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 5005,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 168,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 16,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 10,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/10\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/10{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/10/watchedSite\"\r\n        }\r\n      }\r\n    }, {\r\n      \"modificationTime\" : \"2016-06-27T06:32:06.000Z\",\r\n      \"watchedSite\" : {\r\n        \"kind\" : \"TWITTER\",\r\n        \"siteId\" : null,\r\n        \"siteScreenName\" : \"lskkitb\",\r\n        \"name\" : null\r\n      },\r\n      \"followerCount\" : {\r\n        \"latest\" : 1,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"followedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"postLikedByCount\" : {\r\n        \"latest\" : 0,\r\n        \"dayPrev\" : null,\r\n        \"dayDelta\" : null,\r\n        \"dayChange\" : null,\r\n        \"dayTrend\" : null,\r\n        \"weekPrev\" : null,\r\n        \"weekDelta\" : null,\r\n        \"weekChange\" : null,\r\n        \"weekTrend\" : null,\r\n        \"monthPrev\" : null,\r\n        \"monthDelta\" : null,\r\n        \"monthChange\" : null,\r\n        \"monthTrend\" : null\r\n      },\r\n      \"watchedSiteId\" : 11,\r\n      \"_links\" : {\r\n        \"self\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/11\"\r\n        },\r\n        \"siteSummary\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/11{?projection}\",\r\n          \"templated\" : true\r\n        },\r\n        \"watchedSite\" : {\r\n          \"href\" : \"http://localhost:8080/api/siteSummaries/11/watchedSite\"\r\n        }\r\n      }\r\n    } ]\r\n  },\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"http://localhost:8080/api/siteSummaries\"\r\n    },\r\n    \"profile\" : {\r\n      \"href\" : \"http://localhost:8080/api/profile/siteSummaries\"\r\n    }\r\n  },\r\n  \"page\" : {\r\n    \"size\" : 20,\r\n    \"totalElements\" : 11,\r\n    \"totalPages\" : 1,\r\n    \"number\" : 0\r\n  }\r\n}"
 				}
 			]
 		}

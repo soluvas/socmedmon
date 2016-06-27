@@ -43,7 +43,7 @@
         <!-- Angular-PatternFly  -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
@@ -166,7 +166,7 @@
                     <div class="container-fluid container-cards-pf">
                         <div class="row row-cards-pf">
 
-                            <div class="col-xs-6 col-sm-4 col-md-4" ng-repeat="siteSummary in siteSummaries">
+                            <div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="siteSummary in siteSummaries">
                                 <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 8em">
                                     <h2 class="card-pf-title">
                                         <span ng-if="'TWITTER' == siteSummary.watchedSite.kind">
