@@ -55,6 +55,13 @@
 			<artifactId>twitter4j-core</artifactId>
 			<version>4.0.4</version>
 		</dependency>
+		<dependency>
+			<groupId>org.facebook4j</groupId>
+			<artifactId>facebook4j-core</artifactId>
+			<!--<version>2.4.5</version>-->
+			<!-- Unfortunately, as of facebook4j 2.4.5 you'll need to use patched facebook4j that supports APIv2.6's `Page.fan_count` at https://github.com/ceefour/facebook4j -->
+			<version>2.4.5.soluvas1</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.drools</groupId>
@@ -341,7 +348,7 @@
 			<id>sonatype-nexus</id>
 			<url>https://oss.sonatype.org/content/groups/public/</url>
 			<snapshots>
-				<enabled>true</enabled>
+				<enabled>false</enabled>
 			</snapshots>
 		</repository>
 		<repository>

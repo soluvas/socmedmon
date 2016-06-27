@@ -1,5 +1,6 @@
 package org.soluvas.socmedmon.core;
 
+import com.google.common.base.MoreObjects;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 import org.springframework.data.rest.core.config.Projection;
@@ -164,6 +165,25 @@ public class SiteSummary implements Serializable {
         public void setMonthTrend(PeriodTrend monthTrend) {
             this.monthTrend = monthTrend;
         }
+
+        @Override
+        public String toString() {
+            return MoreObjects.toStringHelper(this).omitNullValues()
+                    .add("latest", latest)
+                    .add("dayPrev", dayPrev)
+                    .add("dayDelta", dayDelta)
+                    .add("dayChange", dayChange)
+                    .add("dayTrend", dayTrend)
+                    .add("weekPrev", weekPrev)
+                    .add("weekDelta", weekDelta)
+                    .add("weekChange", weekChange)
+                    .add("weekTrend", weekTrend)
+                    .add("monthPrev", monthPrev)
+                    .add("monthDelta", monthDelta)
+                    .add("monthChange", monthChange)
+                    .add("monthTrend", monthTrend)
+                    .toString();
+        }
     }
 
     @Projection(name = "inline", types = SiteSummary.class)
@@ -250,5 +270,17 @@ public class SiteSummary implements Serializable {
 
     public void setPostCount(Metric postCount) {
         this.postCount = postCount;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this).omitNullValues()
+                .add("watchedSiteId", watchedSiteId)
+                .add("modificationTime", modificationTime)
+                .add("followerCount", followerCount)
+                .add("followedByCount", followedByCount)
+                .add("postLikedByCount", postLikedByCount)
+                .add("postCount", postCount)
+                .toString();
     }
 }

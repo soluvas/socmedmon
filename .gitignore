@@ -42,5 +42,7 @@ social/config/agent/arkan.json
 
 /config/application.properties
 /config/*.TwitterApp.jsonld
+/config/*.FacebookApp.jsonld
 /config/agent/*.TwitterAuthorization.jsonld
+/config/agent/*.FacebookAuthorization.jsonld
 /config/agent/*.AgentSocialConfig.json

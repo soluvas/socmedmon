@@ -1,9 +1,14 @@
 package org.soluvas.socmedmon.service;
 
 import com.google.common.collect.ImmutableList;
+import facebook4j.Facebook;
+import facebook4j.FacebookFactory;
+import facebook4j.Reading;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.soluvas.socmed.FacebookApp;
+import org.soluvas.socmed.FacebookAuthorization;
 import org.soluvas.socmed.TwitterApp;
 import org.soluvas.socmed.TwitterAuthorization;
 import org.soluvas.socmedmon.core.*;
@@ -40,19 +45,25 @@ public class SiteWatcher {
     private TwitterApp twitterApp;
     @Inject
     private TwitterAuthorization twitterAuth;
+    @Inject
+    private FacebookFactory facebookFactory;
+    @Inject
+    private FacebookApp facebookApp;
+    @Inject
+    private FacebookAuthorization facebookAuth;
 
 //    @Scheduled(cron = "0 */60 * * * *")
     @Scheduled(fixedDelay = 60 * 60 * 1000) // once per hour
     @Transactional
-    public void fetchStats() throws TwitterException {
+    public void fetchStatsTwitter() throws TwitterException {
         final DateTime pointTime = new DateTime().withMillisOfSecond(0);
-        final ImmutableList<WatchedSite> watchedSites = ImmutableList.copyOf(watchedSiteRepo.findAll());
-        log.info("Fetching stats for {} watched sites: {}",
+        final ImmutableList<WatchedSite> watchedSites = ImmutableList.copyOf(watchedSiteRepo.findAllByKind(ExternalSite.TWITTER, new PageRequest(0, 1000)));
+        log.info("Fetching Twitter stats for {} watched sites: {}",
                 watchedSites.size(), watchedSites.stream().limit(10).toArray());
         final List<WatchedSite> twitterUsingIds = watchedSites.stream().filter(it -> ExternalSite.TWITTER == it.getKind() && null != it.getSiteId()).collect(Collectors.toList());
         final List<WatchedSite> twitterUsingScreenNames = watchedSites.stream().filter(it -> ExternalSite.TWITTER == it.getKind() && null == it.getSiteId()).collect(Collectors.toList());
 
-        final Twitter twitter = new TwitterFactory().getInstance();
+        final Twitter twitter = twitterFactory.getInstance();
         twitter.setOAuthConsumer(twitterApp.getApiKey(), twitterApp.getApiSecret());
         twitter.setOAuthAccessToken(new AccessToken(twitterAuth.getAccessToken(), twitterAuth.getAccessTokenSecret()));
 
@@ -61,7 +72,10 @@ public class SiteWatcher {
             log.info("Fetching {} Twitter stats by ID: {}", ids.length, ids);
             try {
                 final ResponseList<User> users = twitter.users().lookupUsers(ids);
-                saveStat(pointTime, watchedSites, users);
+                if (users.size() != ids.length) {
+                    log.warn("Expected {} Twitter users but only got {}", ids.length, users.size());
+                }
+                saveTwitterStat(pointTime, watchedSites, users);
             } catch (TwitterException e) {
                 log.error(String.format("Cannot fetch %s Twitter stats by ID: %s", ids.length, ids), e);
             }
@@ -71,21 +85,23 @@ public class SiteWatcher {
             log.info("Fetching {} Twitter stats by screen name: {}", screenNames.length, screenNames);
             try {
                 final ResponseList<User> users = twitter.users().lookupUsers(screenNames);
-                saveStat(pointTime, watchedSites, users);
+                if (users.size() != screenNames.length) {
+                    log.warn("Expected {} Twitter users but only got {}", screenNames.length, users.size());
+                }
+                saveTwitterStat(pointTime, watchedSites, users);
             } catch (TwitterException e) {
                 log.error(String.format("Cannot fetch %s Twitter stats by screen name: %s", screenNames.length, screenNames), e);
             }
         }
     }
 
-    protected void saveStat(DateTime pointTime, ImmutableList<WatchedSite> watchedSites, ResponseList<User> users) {
+    protected void saveTwitterStat(DateTime pointTime, ImmutableList<WatchedSite> watchedSites, ResponseList<User> users) {
+        log.info("Saving stats for {} Twitter users...", users.size());
         for (final User user : users) {
             final SiteStat siteStat = new SiteStat();
-            WatchedSite watchedSite = watchedSites.stream().filter(it -> ExternalSite.TWITTER == it.getKind() &&
+            final WatchedSite watchedSite = watchedSites.stream().filter(it -> ExternalSite.TWITTER == it.getKind() &&
                     (String.valueOf(user.getId()).equals(it.getSiteId()) ||
                             user.getScreenName().equalsIgnoreCase(it.getSiteScreenName()))).findAny().get();
-            // merge entity
-            watchedSite = watchedSiteRepo.findOne(watchedSite.getId());
 
 //            siteStat.setId(new SiteStatId(watchedSite.getId(), new DateTime()));
             siteStat.setWatchedSiteId(watchedSite.getId());
@@ -99,6 +115,72 @@ public class SiteWatcher {
 
             summarize(pointTime, siteStat, watchedSite);
         }
+    }
+
+    //    @Scheduled(cron = "0 */60 * * * *")
+    @Scheduled(fixedDelay = 60 * 60 * 1000) // once per hour
+    @Transactional
+    public void fetchStatsFacebook() throws TwitterException {
+        final DateTime pointTime = new DateTime().withMillisOfSecond(0);
+        final ImmutableList<WatchedSite> watchedSites = ImmutableList.copyOf(watchedSiteRepo.findAllByKind(ExternalSite.FACEBOOK, new PageRequest(0, 1000)));
+        log.info("Fetching Facebook stats for {} watched sites: {}",
+                watchedSites.size(), watchedSites.stream().limit(10).toArray());
+        final List<WatchedSite> facebookUsingIds = watchedSites.stream().filter(it -> ExternalSite.FACEBOOK == it.getKind() && null != it.getSiteId()).collect(Collectors.toList());
+        final List<WatchedSite> facebookUsingScreenNames = watchedSites.stream().filter(it -> ExternalSite.FACEBOOK == it.getKind() && null == it.getSiteId()).collect(Collectors.toList());
+
+        final Facebook facebook = facebookFactory.getInstance(new facebook4j.auth.AccessToken(facebookAuth.getAccessToken()));
+
+        // PPTIKITB/?fields=name,fan_count,username
+        // {
+//                "name": "Pusat Penelitian Teknologi Informasi dan Komunikasi",
+//                        "fan_count": 526,
+//                        "username": "PPTIKITB",
+//                        "talking_about_count": 11,
+//                        "were_here_count": 59,
+//                        "id": "752403644873915"
+//            }
+        if (!facebookUsingIds.isEmpty()) {
+            final List<String> ids = facebookUsingIds.stream().map(WatchedSite::getSiteId).collect(Collectors.toList());
+            log.info("Fetching {} Facebook stats by ID: {}", ids.size(), ids);
+            try {
+                for (WatchedSite watch : facebookUsingIds) {
+                    final facebook4j.Page page = facebook.pages().getPage(watch.getSiteId(),
+                            new Reading().fields("name", "username", "fan_count", "talking_about_count", "were_here_count"));
+                    log.debug("Received page: {}", page);
+                    saveFacebookStat(pointTime, watch, page);
+                }
+            } catch (Exception e) {
+                log.error(String.format("Cannot fetch %s Facebook stats by ID: %s", ids.size(), ids), e);
+            }
+        }
+        if (!facebookUsingScreenNames.isEmpty()) {
+            final List<String> screenNames = facebookUsingScreenNames.stream().map(WatchedSite::getSiteScreenName).collect(Collectors.toList());
+            log.info("Fetching {} Facebook stats by screen names: {}", screenNames.size(), screenNames);
+            try {
+                for (WatchedSite watch : facebookUsingScreenNames) {
+                    final facebook4j.Page page = facebook.pages().getPage(watch.getSiteScreenName(),
+                            new Reading().fields("name", "username", "likes", "fan_count", "talking_about_count", "were_here_count"));
+                    log.debug("Received page: {}", page);
+                    saveFacebookStat(pointTime, watch, page);
+                }
+            } catch (Exception e) {
+                log.error(String.format("Cannot fetch %s Facebook stats by screen names: %s", screenNames.size(), screenNames), e);
+            }
+        }
+    }
+
+    protected void saveFacebookStat(DateTime pointTime, WatchedSite watchedSite, facebook4j.Page page) {
+        final SiteStat siteStat = new SiteStat();
+
+//            siteStat.setId(new SiteStatId(watchedSite.getId(), new DateTime()));
+        siteStat.setWatchedSiteId(watchedSite.getId());
+        siteStat.setCreationTime(pointTime);
+        siteStat.setFollowerCount(page.getFanCount());
+        siteStat.setFollowedByCount(page.getLikes());
+        siteStatRepo.save(siteStat);
+        log.debug("Saved {} stat: {}", watchedSite, siteStat);
+
+        summarize(pointTime, siteStat, watchedSite);
     }
 
     protected SiteSummary summarize(DateTime pointTime, SiteStat siteStat, WatchedSite watchedSite) {

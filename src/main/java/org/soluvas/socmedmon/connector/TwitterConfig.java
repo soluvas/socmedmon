@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.conf.PropertyConfiguration;
 
 import javax.inject.Inject;
@@ -45,11 +46,11 @@ public class TwitterConfig {
 
     @Bean
     public TwitterFactory twitterFactory() throws IOException {
-        final Properties twitterProps = new Properties();
-        twitterProps.put("oauth.consumerKey", twitterApp().getApiKey());
-        twitterProps.put("oauth.consumerSecret", twitterApp().getApiSecret());
-        final PropertyConfiguration twitterConf = new PropertyConfiguration(twitterProps);
-        return new TwitterFactory(twitterConf);
+        final twitter4j.conf.Configuration configuration = new ConfigurationBuilder()
+                .setOAuthConsumerKey(twitterApp().getApiKey())
+                .setOAuthConsumerSecret(twitterApp().getApiSecret())
+                .build();
+        return new TwitterFactory(configuration);
     }
 
 }

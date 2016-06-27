@@ -1,0 +1,6 @@
+{
+  "@type": "FacebookApp",
+  "apiKey": "1425887797693485",
+  "apiSecret": "",
+   "loginPermissions": ["public_profile", "email", "user_status", "publish_actions", "read_stream"]
+}
