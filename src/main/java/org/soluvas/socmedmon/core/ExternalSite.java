@@ -9,7 +9,20 @@ public enum ExternalSite {
      * Plain web site. When watched using Socmedmon, makes sure it's giving proper 200 response and not showing generic Apache/nginx page.
      */
     WEB,
+    /**
+     * Facebook Page.
+     * For Facebook user, see {@link #FACEBOOK_USER}.
+     * For Facebook group, see {@link #FACEBOOK_GROUP}.
+     */
     FACEBOOK,
+    /**
+     * Facebook User. For Facebook page, see {@link #FACEBOOK}.
+     */
+    FACEBOOK_USER,
+    /**
+     * Facebook Group. For Facebook page, see {@link #FACEBOOK}.
+     */
+    FACEBOOK_GROUP,
     TWITTER,
     INSTAGRAM,
     FOURSQUARE,
