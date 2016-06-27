@@ -1,0 +1,33 @@
+{
+  "name": "socmedmon",
+  "version": "0.0.1",
+  "description": "Social Media Performance Monitoring",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soluvas/socmedmon.git"
+  },
+  "keywords": [
+    "social",
+    "media",
+    "monitor",
+    "performance"
+  ],
+  "author": "Hendy Irawan <hendy@hendyirawan.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/soluvas/socmedmon/issues"
+  },
+  "homepage": "https://github.com/soluvas/socmedmon#readme"
+}

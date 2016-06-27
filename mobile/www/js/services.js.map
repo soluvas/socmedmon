@@ -1,0 +1,1 @@
+{"version":3,"sources":["services.ts"],"names":[],"mappings":"AAAA,6CAA6C;AAC7C,OAAO,CAAC,MAAM,CAAC,kBAAkB,EAAE,EAAE,CAAC,CACrC","file":"services.js","sourcesContent":["/// <reference path=\"../typings/index.d.ts\"/>\r\nangular.module('starter.services', [])\r\n;\r\n"],"sourceRoot":"/source/"}

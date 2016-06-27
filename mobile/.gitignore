@@ -92,3 +92,5 @@ captures/
 
 ### Android Patch ###
 gen-external-apklibs
+/platforms/
+/plugins/

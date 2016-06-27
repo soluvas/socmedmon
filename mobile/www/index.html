@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' localhost:* ws://localhost:* 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <title>Soluvas Socmedmon</title>
+
+        <!-- Angular-PatternFly Styles -->
+        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css" />
+        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css" />
+        <link rel="stylesheet" href="bower_components/angular-patternfly/dist/styles/angular-patternfly.min.css" />
+
+        <!-- Angular-PatternFly  -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <!-- C3, D3 - Charting Libraries. Only required if you are using the 'patternfly.charts' module-->
+        <script src="bower_components/c3/c3.min.js"></script>
+        <script src="bower_components/d3/d3.min.js"></script>
+        <script src="bower_components/matchHeight/dist/jquery.matchHeight-min.js"></script>
+        <script src="bower_components/sugar/release/sugar-full.min.js"></script>
+
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+        <script src="bower_components/angular-patternfly/dist/angular-patternfly.min.js"></script>
+
+    </head>
+    <body ng-app="starter">
+
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="img/brand.png" alt="Soluvas Socmedmon" style="height: 10px" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-utility">
+                <!--<li>
+                    <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="pficon pficon-user"></span>
+                        Brian Johnson <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                        <li>
+                            <a href="#">Another link</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">More options</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Link</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another link</a>
+                                </li>
+                                <li>
+                                    <a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li>
+                                    <a href="#">Separated link</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">One more separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">One more separated link</a>
+                        </li>
+                    </ul>
+                </li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-primary">
+                <!--<li>
+                    <a href="basic.html">Basic</a>
+                </li>
+                <li>
+                    <a href="bootstrap-treeview-2.html">Tree View</a>
+                </li>-->
+                <li class="active">
+                    <a href="dashboard.html" class="active">Dashboard</a>
+                </li>
+                <!--<li>
+                    <a href="form.html">Form</a>
+                </li>
+                <li>
+                    <a href="tab.html">Tab</a>
+                </li>
+                <li>
+                    <a href="typography-2.html">Typography</a>
+                </li>
+                <li>
+                    <a href="cards.html">Cards</a>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" ng-controller="DashboardCtrl">
+        <div class="row">
+            <div class="col-sm-8 col-md-9">
+                <div class="page-header page-header-bleed-right">
+                    <div class="actions pull-right">
+                        <span class="pficon pficon-refresh"></span> {{updateTime.format('RFC1123')}}
+                    </div>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <h2 class="h4">Watched Sites</h2>
+                <div class="cards-pf">
+
+                    <div class="container-fluid container-cards-pf">
+                        <div class="row row-cards-pf">
+
+                            <div class="col-xs-6 col-sm-4 col-md-4" ng-repeat="siteSummary in siteSummaries">
+                                <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 8em">
+                                    <h2 class="card-pf-title">
+                                        <span ng-if="'TWITTER' == siteSummary.watchedSite.kind">
+                                            <i class="fa fa-twitter" style="color: #4099ff"></i>
+                                            <a ng-href="https://twitter.com/{{siteSummary.watchedSite.siteScreenName}}" target="_blank">{{'@' + siteSummary.watchedSite.siteScreenName}}</a>
+                                        </span>
+                                        <span ng-if="'FACEBOOK' == siteSummary.watchedSite.kind">
+                                            <i class="fa fa-facebook"  style="color: #284184"></i>
+                                            <a ng-href="https://facebook.com/{{siteSummary.watchedSite.siteScreenName || siteSummary.watchedSite.siteId}}" target="_blank">{{siteSummary.watchedSite.name || siteSummary.watchedSite.siteScreenName}}</a>
+                                        </span>
+
+                                        <!--<span class="card-pf-aggregate-status-count">0</span>-->
+                                    </h2>
+                                    <div class="card-pf-body">
+                                        <p class="card-pf-aggregate-status-notifications">
+                                            <span class="card-pf-aggregate-status-notification" title="Followers"><i class="fa fa-users"></i>{{siteSummary.followerCount.latest | humaneNumber}}
+                                                <small ng-if="'UP' == siteSummary.followerCount.weekTrend" style="color: green">
+                                                    <i class="fa fa-arrow-up"></i>{{siteSummary.followerCount.weekDelta | humaneNumber}}
+                                                </small>
+                                                <small ng-if="'DOWN' == siteSummary.followerCount.weekTrend" style="color: red">
+                                                    <i class="fa fa-arrow-down"></i>{{siteSummary.followerCount.weekDelta | humaneNumber}}
+                                                </small>
+                                                <small ng-if="'NONE' == siteSummary.followerCount.weekTrend" style="color: orange">
+                                                    <i class="fa fa-minus"></i>
+                                                </small>
+                                                </span>
+                                            <span class="card-pf-aggregate-status-notification" title="Posts" ng-if="siteSummary.postCount.latest">
+                                                <span class="fa fa-file-o"></span>{{siteSummary.postCount.latest | humaneNumber}}
+                                               <small ng-if="'UP' == siteSummary.postCount.weekTrend" style="color: green">
+                                                    <i class="fa fa-arrow-up"></i>{{siteSummary.postCount.weekDelta}}
+                                                </small>
+                                                <small ng-if="'DOWN' == siteSummary.postCount.weekTrend" style="color: red">
+                                                    <i class="fa fa-arrow-down"></i>{{siteSummary.postCount.weekDelta}}
+                                                </small>
+                                                <small ng-if="'NONE' == siteSummary.postCount.weekTrend" style="color: orange">
+                                                    <i class="fa fa-minus"></i>
+                                                </small>
+                                             </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+<!--
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="card-pf card-pf-accented card-pf-aggregate-status">
+                                    <h2 class="card-pf-title">
+                                        <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
+                                    </h2>
+                                    <div class="card-pf-body">
+                                        <p class="card-pf-aggregate-status-notifications">
+                                            <span class="card-pf-aggregate-status-notification"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="card-pf card-pf-accented card-pf-aggregate-status">
+                                    <h2 class="card-pf-title">
+                                        <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">20</span> Amet</a>
+                                    </h2>
+                                    <div class="card-pf-body">
+                                        <p class="card-pf-aggregate-status-notifications">
+                                            <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>4</a></span>
+                                            <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-warning-triangle-o"></span>1</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="card-pf card-pf-accented card-pf-aggregate-status">
+                                    <h2 class="card-pf-title">
+                                        <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">9</span> Adipiscing</a>
+                                    </h2>
+                                    <div class="card-pf-body">
+                                        <p class="card-pf-aggregate-status-notifications">
+                                            <span class="card-pf-aggregate-status-notification"><span class="pficon pficon-ok"></span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+-->
+
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+
+                </div>
+
+            </div><!-- /col -->
+            <div class="col-sm-4 col-md-3 sidebar-pf sidebar-pf-right">
+                <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">
+                    <div class="actions pull-right">
+                        <!--<a href="#">Clear Messages</a>-->
+                    </div>
+                    <h2 class="h5">Latest Notifications</h2>
+                </div>
+                <ul class="list-group">
+                    <!--<li class="list-group-item">
+                        <h3 class="list-group-item-heading">Duis eu augue lectus</h3>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Donec dictum odio eu turpis rutrum</h3>
+                        <p class="list-group-item-text">Etiam sit amet ultricies ligula.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">At egestas nibh dictum</h3>
+                        <p class="list-group-item-text">Maecenas vitae tempus mauris.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Phasellus dictum posuere ante sit</h3>
+                        <p class="list-group-item-text">Pellentesque rutrum justo in congue tristique.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Amet commodo</h3>
+                        <p class="list-group-item-text">Pellentesque in leo elit.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Nunc viverra purus libero</h3>
+                        <p class="list-group-item-text">Nulla lacinia lorem quis enim posuere dictum.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Non faucibus augue dapibus at</h3>
+                        <p class="list-group-item-text">Fusce id rutrum ante, eget vestibulum dolor</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Vivamus at semper</h3>
+                        <p class="list-group-item-text">Duis sagittis vitae neque at vehicula.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="list-group-item-heading">Sed sit amet dolor</h3>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                    </li>-->
+                </ul>
+                <!--<p><a href="#">See all messages</a></p>-->
+            </div><!-- /col -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+
+        <!--<div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>-->
+
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <!--<script type="text/javascript" src="js/index.js"></script>-->
+        <script type="text/javascript" src="js/services.js"></script>
+        <script type="text/javascript" src="js/controllers.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
