@@ -27,10 +27,10 @@ public class SiteStat implements Serializable {
 
         public WatchedSite getWatchedSite();
 
-        public int getFollowerCount();
-        public int getFollowedByCount();
-        public int getPostLikedByCount();
-        public int getPostCount();
+        public Integer getFollowerCount();
+        public Integer getFollowedByCount();
+        public Integer getPostLikedByCount();
+        public Integer getPostCount();
     }
 
     //    @Component
@@ -58,10 +58,10 @@ public class SiteStat implements Serializable {
     @JoinColumn(name = "watchedsite_id", insertable = false, updatable = false)
     private WatchedSite watchedSite;
 
-    private int followerCount;
-    private int followedByCount;
-    private int postLikedByCount;
-    private int postCount;
+    private Integer followerCount;
+    private Integer followedByCount;
+    private Integer postLikedByCount;
+    private Integer postCount;
 
     public Long getId() {
         return id;
@@ -96,14 +96,14 @@ public class SiteStat implements Serializable {
     }
 
     /**
-     * Number of followers of this site/social media account.
+     * Number of followers or members of this site/social media account.
      * @return
      */
-    public int getFollowerCount() {
+    public Integer getFollowerCount() {
         return followerCount;
     }
 
-    public void setFollowerCount(int followerCount) {
+    public void setFollowerCount(Integer followerCount) {
         this.followerCount = followerCount;
     }
 
@@ -111,11 +111,11 @@ public class SiteStat implements Serializable {
      * Number of accounts followed by this site/social media account.
      * @return
      */
-    public int getFollowedByCount() {
+    public Integer getFollowedByCount() {
         return followedByCount;
     }
 
-    public void setFollowedByCount(int followedByCount) {
+    public void setFollowedByCount(Integer followedByCount) {
         this.followedByCount = followedByCount;
     }
 
@@ -123,11 +123,11 @@ public class SiteStat implements Serializable {
      * Number of posts liked by this site/social media account.
      * @return
      */
-    public int getPostLikedByCount() {
+    public Integer getPostLikedByCount() {
         return postLikedByCount;
     }
 
-    public void setPostLikedByCount(int postLikedByCount) {
+    public void setPostLikedByCount(Integer postLikedByCount) {
         this.postLikedByCount = postLikedByCount;
     }
 
@@ -135,11 +135,11 @@ public class SiteStat implements Serializable {
      * Number of posts by this site/social media account.
      * @return
      */
-    public int getPostCount() {
+    public Integer getPostCount() {
         return postCount;
     }
 
-    public void setPostCount(int postCount) {
+    public void setPostCount(Integer postCount) {
         this.postCount = postCount;
     }
 

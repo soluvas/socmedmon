@@ -29,6 +29,10 @@ public class WatchedSite implements Serializable {
     private String siteScreenName;
     private String name;
 
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @PrimaryKeyJoinColumn
+    private SiteSummary summary;
+
     public Long getId() {
         return id;
     }
@@ -83,6 +87,14 @@ public class WatchedSite implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public SiteSummary getSummary() {
+        return summary;
+    }
+
+    public void setSummary(SiteSummary summary) {
+        this.summary = summary;
     }
 
     @Override
