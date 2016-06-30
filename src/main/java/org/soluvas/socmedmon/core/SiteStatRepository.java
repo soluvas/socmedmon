@@ -15,21 +15,21 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface SiteStatRepository extends JpaRepository<SiteStat, Long> {
 
     /**
-     * Usually, you sort by creationTime DESC and get 1 (latest before given pivot {@link DateTime}), e.g.
+     * Usually, you sort by creationTime ASC and get 1 (oldest at/after given pivot {@link DateTime}), e.g.
      *
      * <pre>{@code
-     * final Optional<SiteStat> dayPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusDays(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
-     * final Optional<SiteStat> weekPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusWeeks(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
-     * final Optional<SiteStat> monthPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusMonths(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+     * final Optional<SiteStat> dayPrev = siteStatRepo.findAllBySiteAfter(watchedSite.getId(), pointTime.minusDays(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+     * final Optional<SiteStat> weekPrev = siteStatRepo.findAllBySiteAfter(watchedSite.getId(), pointTime.minusWeeks(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+     * final Optional<SiteStat> monthPrev = siteStatRepo.findAllBySiteAfter(watchedSite.getId(), pointTime.minusMonths(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
      * }</pre>
      *
      * @param watchedSiteId
-     * @param atOrBefore
+     * @param atOrAfter
      * @param pageable
      * @return
      */
-    @Query("SELECT e FROM SiteStat e WHERE e.watchedSiteId = :watchedSiteId AND e.creationTime <= :atOrBefore")
-    Page<SiteStat> findAllBySiteBefore(@Param("watchedSiteId") long watchedSiteId,
-                                       @Param("atOrBefore") DateTime atOrBefore, Pageable pageable);
+    @Query("SELECT e FROM SiteStat e WHERE e.watchedSiteId = :watchedSiteId AND e.creationTime >= :atOrAfter")
+    Page<SiteStat> findAllBySiteAfter(@Param("watchedSiteId") long watchedSiteId,
+                                      @Param("atOrAfter") DateTime atOrAfter, Pageable pageable);
 
 }

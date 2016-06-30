@@ -209,9 +209,9 @@ public class SiteWatcher {
         siteSummary.getPostLikedByCount().setLatest(siteStat.getPostLikedByCount());
 
         // Comparative Metrics
-        final Optional<SiteStat> dayPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusDays(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
-        final Optional<SiteStat> weekPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusWeeks(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
-        final Optional<SiteStat> monthPrev = siteStatRepo.findAllBySiteBefore(watchedSite.getId(), pointTime.minusMonths(1), new PageRequest(0, 1, Sort.Direction.DESC, "creationTime")).getContent().stream().findFirst();
+        final Optional<SiteStat> dayPrev = siteStatRepo.findAllBySiteAfter(watchedSite.getId(), pointTime.minusDays(1), new PageRequest(0, 1, Sort.Direction.ASC, "creationTime")).getContent().stream().findFirst();
+        final Optional<SiteStat> weekPrev = siteStatRepo.findAllBySiteAfter(watchedSite.getId(), pointTime.minusWeeks(1), new PageRequest(0, 1, Sort.Direction.ASC, "creationTime")).getContent().stream().findFirst();
+        final Optional<SiteStat> monthPrev = siteStatRepo.findAllBySiteAfter(watchedSite.getId(), pointTime.minusMonths(1), new PageRequest(0, 1, Sort.Direction.ASC, "creationTime")).getContent().stream().findFirst();
         log.debug("Prev stat for {}: day={} week={} month={}",
                 watchedSite, dayPrev.orElse(null), weekPrev.orElse(null), monthPrev.orElse(null));
         setComparativeMetric(siteSummary.getFollowerCount(), dayPrev.map(SiteStat::getFollowerCount),
