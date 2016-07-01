@@ -47,7 +47,7 @@ public class FacebookConfig {
     @Bean
     public FacebookFactory facebookFactory() throws IOException {
         final facebook4j.conf.Configuration configuration = new ConfigurationBuilder()
-                .setRestBaseURL("https://graph.facebook.com/v2.6/") // we need fan_count
+                .setRestBaseURL("https://graph.facebook.com/v2.6/") // we need fan_count (https://github.com/roundrop/facebook4j/pull/99)
                 .setOAuthAppId(facebookApp().getApiKey())
                 .setOAuthAppSecret(facebookApp().getApiSecret())
                 .build();

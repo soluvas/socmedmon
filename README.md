@@ -15,8 +15,6 @@ TODO: publish data automatically to public data server (data.go.id or open data 
 ## Building and Running
 
 1. in PostgreSQL, pgAdmin III Create `buzz_buzz_dev` database
-2. Unfortunately, as of facebook4j 2.4.5 you'll need to use patched facebook4j that supports APIv2.6's `Page.fan_count` at https://github.com/ceefour/facebook4j
-    See https://github.com/roundrop/facebook4j/pull/99
 2. In `config` folder (not in `src\main\resources` folder), copy `application.dev.properties` to `application.properties` (make it)
 3. If you use proxy, you need to edit `application.properties` and enter your proxy address+username+password, from `http.proxyHost` to `https.proxyPort` delete "#" , 
     enter your `spring.datasource.username` and `spring.datasource.password`,  delete "#" ,
